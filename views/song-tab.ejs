@@ -1,0 +1,66 @@
+<div class="top-bar-section">
+					<input type="text" id="searchBar" onkeyup="searchFor()" placeholder="Search..."/>
+					<form id="upload-song-form" enctype="multipart/form-data">
+						<input id="upload-song-submit" type="submit" value="Send audios"></input>
+						<label for="import_song" name ="import_song_label" class="add_song_button">
+							<i class="fas fa-plus"></i>
+						</label>
+						<input type="file" name="import_song" id="import_song" multiple="multiple"/>
+					</form>
+				</div>
+				<div>
+					<table class="song-table" cellpadding="0" cellspacing="0" border="0">
+						<thead>
+							<tr class ="song-table-header">
+								<th onclick="sortTableCol(0);">Title <i class="fas fa-sort-down"></i></th>
+								<th onclick="sortTableCol(1);">Artist <i class="fas fa-sort-down"></i></th>
+								<th>
+									<i class="far fa-clock"></i>
+								</th>
+								<th></th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="tb-content">
+					<table id="songList" class="song-table" cellpadding="0" cellspacing="0" border="0">
+						<tbody>
+							<% for (var i = 0; i
+							< datas.length ; i++) { %>
+							<tr
+								id ="song-row<%=[i]%>"
+								data-id="<%= datas[i].id %>"
+								data-path="<%= datas[i].meta.path %>"
+								data-picture="<%= datas[i].meta.picture %>"
+								data-title="<%= datas[i].meta.title %>"
+								data-artist="<%= datas[i].meta.artist %>"
+								data-favorite="<%= datas[i].favorite %>"
+								style="cursor: pointer;"
+								draggable="true">
+								<td class="song-table-cell text-ellipsis">
+									<%= datas[i].meta.title %>
+								</td>
+								<td class="song-table-cell text-ellipsis">
+									<%= datas[i].meta.artist %>
+								</td>
+								<td class="song-table-cell text-ellipsis">
+									<%= datas[i].meta.duration %>
+								</td>
+								<td class="song-table-cell song-table-button-cell">
+									<a class="fav-btn">
+										<i class="far fa-heart"></i>
+									</a>
+									<a>
+										<div class="dropdown-menu">
+											<i class="fas fa-ellipsis-v"></i>
+											<a class="dropdown-content" onclick="deleteData(`<%= datas[i].path %>`)">
+											Delete
+											</a>
+										</div>
+									</a>
+								</td>
+							</tr>
+							<% } %>
+						</tbody>
+					</table>
+				</div>

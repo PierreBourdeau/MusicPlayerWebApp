@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Music App - WIP</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b49acaecd6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="page-preloader"><div class="loader"></div></div>
+	<main>
+		<div id="side-navbar" class="flex-container-col"><%- include(sidebar, {playlists, userName, userPP}); %></div>
+		<div class="right-part flex-container-col">
+			<div class="overlay"></div>
+			<div id="preloader">
+				<div class="loader"></div>
+			</div>
+			<div id="song-tab" class="flex-container-col">
+				<%- include(songtab, {datas, playlists, userName, userPP}); %>
+			</div>
+		</div>
+	</main>
+	<%- include(bottomplaybar, {datas, playlists, userName, userPP}); %>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script>
+    window.onload = function(){
+        document.getElementById('page-preloader').style.display = "none";
+    }
+	</script>
+	<script src="tableAndAudioController.js"></script>
+	<script src="sideNavbarController.js"></script>
+	<script src="uploadFileController.js"></script>
+	<script src="deleteFileController.js"></script>
+	<script src="playerController.js"></script>
+</body>
+</html>

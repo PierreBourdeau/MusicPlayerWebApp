@@ -1,0 +1,50 @@
+<div class="bottom-play-bar" id="bottomplay-bar">
+		<div class="bottom-play-bar-section1">
+			<div><img id="songPicture"></img></div>
+			<div>
+				<h4 id="songTitle"></h4>
+				<p id="artistName"></p>
+			</div>
+		</div>
+		<div class="bottom-play-bar-section2">
+			<div class="bottom-play-bar-section2-slider">
+				<p id="music_current_time"></p>
+				<input type="range" min="0" max="100" step="0.1" value="0" id="music_slider" oninput="sliderPositionUpdate()" onchange="sliderPositionUpdate()"></input>
+				<p id="music_duration"></p>
+			</div>
+			<div class="bottom-play-bar-section2-buttons">
+				<input type="checkbox" name="randomize" id="randomize-checkbox"></input>
+				<label for="randomize-checkbox" id="randomize-label">
+					<i class="fas fa-random">
+						<i class="fas fa-check activeStateVisual" id="randomizeActiveStateVisual"></i>
+					</i>
+				</label>
+				<a href="#" id="step-backward">
+					<i class="fas fa-step-backward"></i>
+				</a>
+				<a href="#" id="play_pause_button" onclick="playPauseSong()">
+					<i class="fas fa-pause"></i>
+				</a>
+				<a href="#" id="step-forward">
+					<i class="fas fa-step-forward"></i>
+				</a>
+				<input type="checkbox" name="loop" id="loop-checkbox" checked="true"></input>
+				<label for="loop-checkbox">
+					<i class="fas fa-retweet">
+						<i class="fas fa-check activeStateVisual" id="looperActiveStateVisual"></i>
+					</i>
+				</label>
+			</div>
+		</div>
+		<div class="bottom-play-bar-section3">
+			<div class="volume_div">
+				<a href="#" class="volume_button" onclick="muteSound()">
+					<i class="fas fa-volume-up"  id="volume-icon"></i>
+				</a>
+				<input type="range" name="" min="0" max="100" value="50" id="volume_slider" oninput="updateVolume()" onchange="updateVolume()"></input>
+			</div>
+			<a href="#" class="fullscreen_button">
+				<i class="fas fa-expand-alt"></i>
+			</a>
+		</div>
+	</div>

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background-div {
+    background-image: url(53.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.login-main {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(3px);
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.login-first {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+    .login-form form input[type=email], input[type=password], input[type=text] {
+        padding: 5px 10px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid rgba(255,255,255,0.5);
+        color: #fff;
+        font-weight: bold;
+    }
+        .login-form form label {
+            position: relative;
+            display: flex;
+            margin: 20px;
+        }
+
+        .check-positionning {
+            position: absolute;
+            right: -5px;
+        }
+    .login-form form label::after {
+        width: 0%;
+        content: '';
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        transition: width 1s ease-in-out;
+    }
+
+        .login-form form label:hover::after {
+            width: 100%;
+        }
+
+.login-form form input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+    outline: none;
+}
+
+    .login-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+.login-form form input[type=submit] {
+    background: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: solid #fff 1px;
+    font-weight: bold;
+    transition: ease-in-out 0.5s;
+    text-transform: uppercase;
+}
+.login-form form input[type=submit]:hover {
+    background: #fff;
+    color: black;
+}
+
+.input-error {
+    border-bottom: 2px solid rgba(255,0,0,1) !important;
+}

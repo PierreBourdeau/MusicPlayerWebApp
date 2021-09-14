@@ -1,0 +1,44 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login - Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b49acaecd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="login-page.css" />
+</head>
+<body>
+    <div class="background-div">
+        <div class="login-main">
+            <div class="login-first"><i class="fas fa-user"></i></div>
+            <div class="login-form">
+                <form id="register-form" action="/register" method="POST" enctype="multipart/form-data">
+                    <label>
+                        <input type="text" placeholder="Name" name="username" id="username" required/>
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Surname" name="usersurname" id="usersurname" required/>
+                    </label>
+                    <label>
+                        <input type="email" placeholder="Email" name="usermail" id="usermail" required/>
+                    </label>
+                    <label>
+                        <input type="email" placeholder="Confirm mail" name="usermailconfirmation" id="usermailconfirmation" required/>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Password" name="userpassword" id="userpassword" required/>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Confirm password" name="userpasswordconfirmation" id="userpasswordconfirmation" required/>
+                    </label>
+                    <label>
+                        <input type="file" name="userPpInput" id="userPpInput"/>
+                    </label>
+                    <input type="button" id="submitter" value="Join !"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="registerController.js"></script>
+</body>
+</html>

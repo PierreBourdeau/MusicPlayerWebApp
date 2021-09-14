@@ -1,0 +1,133 @@
+
+/*SIDE NAVBAR STYLE*/
+.side-navbar-tab-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+    transition: background ease-in-out 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+    .side-navbar-tab-btn:hover {
+        background: var(--se-bg-color);
+    }
+
+/*SIDE NAVBAR FIRST PART STYLE*/
+.side-navbar-first {
+    flex: 1;
+    max-height: 33.33%;
+}
+
+.side-navbar-first-user {
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+    .side-navbar-first-user div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+        .side-navbar-first-user div form {
+            backdrop-filter: blur(3px);
+            background: rgba(0,0,0,0.6);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 0px;
+            transition: height 0.5s ease-in-out;
+            cursor: pointer;
+        }
+            .side-navbar-first-user div form label {
+                cursor: pointer;
+            }
+
+                .side-navbar-first-user div:hover form {
+                    height: 30px;
+                }
+        .side-navbar-first-user img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+        .side-navbar-first-user input {
+            display: none;
+        }
+
+/*SIDE NAVBAR SECOND PART STYLE*/
+.side-navbar-second {
+    flex: 1;
+    max-height: 33.33%;
+}
+
+/*SIDE NAVBAR THIRD PART STYLE*/
+.side-navbar-third {
+    flex: 1;
+    max-height: 33.33%;
+}
+
+#side-navbar .side-navbar-third .side-navbar-tab-btn {
+    white-space: nowrap;
+}
+
+#side-navbar .side-navbar-third .side-navbar-tab-btn:hover label {
+    max-width: 300px;
+}
+#side-navbar .side-navbar-third .side-navbar-tab-btn label {
+    transition: max-width 1s ease-in-out;
+    max-width: 0px;
+    overflow: hidden;
+}
+#side-navbar .side-navbar-third .side-navbar-tab-btn:hover a {
+    max-width: 0px;
+}
+
+#side-navbar .side-navbar-third .side-navbar-tab-btn a {
+    transition: max-width 1s ease-in-out;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+    #side-navbar .side-navbar-third .side-navbar-tab-btn input[type=text] {
+        border-radius: 15px;
+        background: #fff;
+        border: none;
+        padding: 0 5px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        height: 25px;
+    }
+
+
+.side-navbar-third table {
+    width: 100%;
+    background: var(--e-bg-color);
+    table-layout: fixed;
+}
+    .side-navbar-third tr {
+        transition: background ease-in-out 0.5s;
+    }
+        .side-navbar-third tr:hover {
+            background: var(--se-bg-color);
+            padding: 15px 20px;
+        }
+        .side-navbar-third tr td {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            color: var(--t-color);
+            font-weight: bold;
+            padding: 10px 5px;
+            border-bottom: solid 1px rgba(255,255,255,0.1);
+        }

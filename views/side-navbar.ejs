@@ -1,0 +1,60 @@
+<div class="side-navbar-first flex-container-col">
+				<a>
+					<i class="fas fa-ellipsis-h"></i>
+				</a>
+				<div class="side-navbar-first-user flex-container-col">
+					<div>
+						<img src="<%= userPP %>"></img>
+						<form id="profilePictureForm" enctype="multipart/form-data">
+							<label for="profilePictureInput" class="profilePictureLabel"><i class="fas fa-camera"></i></label>
+							<input type="file" id="profilePictureInput" name="profilePictureInput"/>
+						</form>
+					</div>
+					<h3>Welcome <%= userName %></h3>
+				</div>
+			</div>
+			<div class="side-navbar-second flex-container-col">
+				<div class="side-navbar-tab-btn">
+					<a id="music-btn">
+						<i class="fas fa-play"></i> Music
+					</a>
+				</div>
+				<div class="side-navbar-tab-btn">
+					<a>
+						<i class="fas fa-list-ul"></i> Playlists
+					</a>
+				</div>
+				<div class="side-navbar-tab-btn">
+					<a id="favorites-btn">
+						<i class="fas fa-heart"></i> Favourite
+					</a>
+				</div>
+			</div>
+			<div class="side-navbar-third flex-container-col">
+				<div class="side-navbar-tab-btn">
+					<a>
+						<i class="fas fa-plus"></i> Create playlist
+					</a>
+					<label>
+						<input type="text" placeholder="Playlist name" id="createPlaylistInput" name="createPlaylistInput" required/>
+					</label>
+				</div>
+				<div class="tb-content">
+					<table cellpadding="0" cellspacing="0" border="0">
+					<tbody>
+							<% for (var i = 0; i
+							< playlists.length ; i++) { %>
+							<tr
+								id ="playlist-row<%=[i]%>" 
+								data-playlist-id="<%= playlists[i].id %>"
+								data-playlist-name="<%= playlists[i].playlist_name %>"
+								style="cursor: pointer;">
+								<td class=" text-ellipsis">
+									<%= playlists[i].playlist_name %>
+								</td>
+							</tr>
+							<% } %>
+						</tbody>
+					</table>
+				</div>
+			</div>
